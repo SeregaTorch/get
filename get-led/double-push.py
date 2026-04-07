@@ -15,6 +15,9 @@ def dec2bin(value):
 
 sleep_time = 0.2
 while True:
+    if GPIO.input(up) and GPIO.input(down):
+        num = 255
+        continue
     if (GPIO.input(up) and num == 255) or (GPIO.input(down) and num  == 1 ):
         print ("lox")
         GPIO.output(leds, 0)
@@ -31,7 +34,4 @@ while True:
         print(num, dec2bin(num))
         GPIO.output(leds, dec2bin(num))
         time.sleep(sleep_time)
-        continue
-    if GPIO.input(up) and GPIO.input(down):
-        num = 255
         continue
