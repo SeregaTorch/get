@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BCM)
 led = 23
-GPIO.setmode(GPIO.BCM)
+GPIO.setup(led, GPIO.OUT)
 button = 13
 GPIO.setup(button, GPIO.IN)
 state = 0
