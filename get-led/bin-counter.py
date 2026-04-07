@@ -21,6 +21,7 @@ while True:
             exit
         else:
             print(num, dec2bin(num))
+            GPIO.output(leds, num)
             time.sleep(sleep_time)
 
     if GPIO.input(down):
@@ -29,4 +30,5 @@ while True:
             exit
         else:
             print(num, dec2bin(num))
+            GPIO.output(leds, num)
             time.sleep(sleep_time)
