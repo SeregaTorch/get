@@ -43,7 +43,7 @@ class R2R_ADC:
         return voltage
 
 if __name__ == "__main__":
-    MY_DYNAMIC_RANGE = 3.3 
+    MY_DYNAMIC_RANGE = 3.29 
     
     adc = R2R_ADC(dynamic_range=MY_DYNAMIC_RANGE)
     
